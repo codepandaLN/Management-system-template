@@ -1,12 +1,14 @@
 package com.panda.model.dto.user;
 
 import com.baomidou.mybatisplus.annotation.TableField;
+import com.baomidou.mybatisplus.annotation.TableLogic;
 import lombok.Data;
 
 import java.io.Serializable;
+import java.util.Date;
 
 /**
- * 用户更新请求
+ * 更新学生信息请求（仅限老师和管理员）
  *
  * @author panda
  */
@@ -18,34 +20,31 @@ public class UserUpdateRequest implements Serializable {
     private Long id;
 
     /**
-     * 用户昵称
+     * 姓名
      */
     private String userName;
 
     /**
-     * 账号
+     * 年级
      */
-    private String userAccount;
+    private String userGrade;
 
     /**
-     * 用户头像
-     */
-    private String userAvatar;
+     * 院系
 
-    /**
-     * 性别
      */
-    private Integer gender;
-
-    /**
-     * 用户角色: user, admin
-     */
-    private String userRole;
+    private String deptId;
 
     /**
      * 密码
      */
     private String userPassword;
+
+    /**
+     * 用户角色：student / teacher / admin
+     */
+    private String userRole;
+
 
     @TableField(exist = false)
     private static final long serialVersionUID = 1L;

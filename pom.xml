@@ -9,14 +9,17 @@
         <version>2.7.0</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.yupi</groupId>
+
+    <groupId>com.panda</groupId>
     <artifactId>springboot-init</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>springboot-init</name>
     <description>springboot 初始项目</description>
+
     <properties>
         <java.version>1.8</java.version>
     </properties>
+
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>

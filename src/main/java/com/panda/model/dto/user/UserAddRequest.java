@@ -12,38 +12,13 @@ import java.util.Date;
  * @author panda
  */
 @Data
-public class StudentAddRequest implements Serializable {
-
-    /**
-     * 学号
-     */
-    private Integer sno;
+public class UserAddRequest implements Serializable {
 
     /**
      * 姓名
      */
-    private String name;
+    private String userName;
 
-    /**
-     * 性别
-     */
-    private Integer gender;
-
-    /**
-     * 年级
-     */
-    private String userGrade;
-
-    /**
-     * 院系
-
-     */
-    private String deptId;
-
-    /**
-     * 用户头像
-     */
-    private String userAvatar;
 
     /**
      * 账号
@@ -54,17 +29,6 @@ public class StudentAddRequest implements Serializable {
      * 密码
      */
     private String userPassword;
-
-    /**
-     * 电话
-     */
-    private String phone;
-
-    /**
-     * 邮箱
-     */
-    private String email;
-
 
     /**
      * 用户角色：student / teacher / admin

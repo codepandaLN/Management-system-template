@@ -3,8 +3,11 @@ package com.panda.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.panda.model.entity.User;
+import com.panda.model.vo.LoginUserVO;
+import com.panda.model.vo.UserVO;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.List;
 
 /**
  * 用户服务
@@ -21,7 +24,7 @@ public interface UserService extends IService<User> {
      * @param checkPassword 校验密码
      * @return 新用户 id
      */
-    long userRegister(String userAccount, String userPassword, String checkPassword);
+    long userRegister(String userAccount, String userPassword, String checkPassword,String userRole);
 
     /**
      * 用户登录
@@ -31,7 +34,15 @@ public interface UserService extends IService<User> {
      * @param request
      * @return 脱敏后的用户信息
      */
-    User userLogin(String userAccount, String userPassword, HttpServletRequest request);
+    LoginUserVO userLogin(String userAccount, String userPassword, HttpServletRequest request);
+
+    /**
+     * 用户注销
+     *
+     * @param request
+     * @return
+     */
+    boolean userLogout(HttpServletRequest request);
 
     /**
      * 获取当前登录用户
@@ -50,10 +61,16 @@ public interface UserService extends IService<User> {
     boolean isAdmin(HttpServletRequest request);
 
     /**
-     * 用户注销
+     * 是否为老师
      *
      * @param request
      * @return
      */
-    boolean userLogout(HttpServletRequest request);
+    boolean isTeacher(HttpServletRequest request);
+
+    LoginUserVO getLoginUserVO(User user);
+
+    UserVO getUserVO(User user);
+
+    List<UserVO> getUserVO(List<User> userList);
 }

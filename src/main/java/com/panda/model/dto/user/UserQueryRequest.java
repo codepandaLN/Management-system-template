@@ -21,19 +21,14 @@ public class UserQueryRequest extends PageRequest implements Serializable {
     private Long id;
 
     /**
-     * 用户昵称
+     * 学号
+     */
+    private Long sno;
+
+    /**
+     * 姓名
      */
     private String userName;
-
-    /**
-     * 账号
-     */
-    private String userAccount;
-
-    /**
-     * 用户头像
-     */
-    private String userAvatar;
 
     /**
      * 性别
@@ -41,19 +36,27 @@ public class UserQueryRequest extends PageRequest implements Serializable {
     private Integer gender;
 
     /**
-     * 用户角色: user, admin
+     * 年级
      */
-    private String userRole;
+    private String userGrade;
 
     /**
-     * 创建时间
+     * 院系
+
      */
-    private Date createTime;
+    private String deptId;
+
 
     /**
-     * 更新时间
+     * 电话
      */
-    private Date updateTime;
+    private String phone;
+
+    /**
+     * 邮箱
+     */
+    private String email;
+
 
     private static final long serialVersionUID = 1L;
 }

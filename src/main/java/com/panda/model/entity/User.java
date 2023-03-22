@@ -23,12 +23,12 @@ public class User implements Serializable {
     /**
      * 学号
      */
-    private Integer sno;
+    private Long sno;
 
     /**
      * 姓名
      */
-    private String stuName;
+    private String userName;
 
     /**
      * 性别
@@ -45,11 +45,6 @@ public class User implements Serializable {
 
      */
     private String deptId;
-
-    /**
-     * 用户昵称
-     */
-    private String userName;
 
     /**
      * 用户头像
@@ -75,6 +70,11 @@ public class User implements Serializable {
      * 邮箱
      */
     private String email;
+
+    /**
+     * 用户简介
+     */
+    private String userProfile;
 
     /**
      * 创建时间

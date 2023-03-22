@@ -7,6 +7,12 @@ package com.panda.constant;
  */
 public interface CommonConstant {
 
+
+    /**
+     * 盐值，混淆密码
+     */
+    String SALT = "panda";
+
     /**
      * 升序
      */

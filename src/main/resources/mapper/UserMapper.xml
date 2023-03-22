@@ -6,17 +6,17 @@
 
     <resultMap id="BaseResultMap" type="com.panda.model.entity.User">
             <id property="id" column="id" jdbcType="BIGINT"/>
-            <result property="sno" column="sno" jdbcType="INTEGER"/>
-            <result property="stuName" column="stuName" jdbcType="VARCHAR"/>
+            <result property="sno" column="sno" jdbcType="BIGINT"/>
+            <result property="userName" column="userName" jdbcType="VARCHAR"/>
             <result property="gender" column="gender" jdbcType="TINYINT"/>
             <result property="userGrade" column="userGrade" jdbcType="VARCHAR"/>
             <result property="deptId" column="deptId" jdbcType="VARCHAR"/>
-            <result property="userName" column="userName" jdbcType="VARCHAR"/>
             <result property="userAvatar" column="userAvatar" jdbcType="VARCHAR"/>
             <result property="userAccount" column="userAccount" jdbcType="VARCHAR"/>
             <result property="userPassword" column="userPassword" jdbcType="VARCHAR"/>
             <result property="phone" column="phone" jdbcType="VARCHAR"/>
             <result property="email" column="email" jdbcType="VARCHAR"/>
+            <result property="userProfile" column="userProfile" jdbcType="VARCHAR"/>
             <result property="createTime" column="createTime" jdbcType="TIMESTAMP"/>
             <result property="updateTime" column="updateTime" jdbcType="TIMESTAMP"/>
             <result property="isDelete" column="isDelete" jdbcType="TINYINT"/>
@@ -24,11 +24,11 @@
     </resultMap>
 
     <sql id="Base_Column_List">
-        id,sno,stuName,
+        id,sno,userName,
         gender,userGrade,deptId,
-        userName,userAvatar,userAccount,
+        userAvatar,userAccount,
         userPassword,phone,email,
         createTime,updateTime,isDelete,
-        userRole
+        userRole,userProfile
     </sql>
 </mapper>

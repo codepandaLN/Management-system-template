@@ -21,6 +21,8 @@ create table if not exists user
         unique (userAccount)
 ) comment '用户';
 
+
+
 DROP TABLE IF EXISTS `leave`;
 CREATE TABLE `leave`
 (

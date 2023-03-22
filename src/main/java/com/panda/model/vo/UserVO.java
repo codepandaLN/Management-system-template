@@ -18,19 +18,14 @@ public class UserVO implements Serializable {
     private Long id;
 
     /**
-     * 用户昵称
+     * 学号
+     */
+    private Integer sno;
+
+    /**
+     * 姓名
      */
     private String userName;
-
-    /**
-     * 账号
-     */
-    private String userAccount;
-
-    /**
-     * 用户头像
-     */
-    private String userAvatar;
 
     /**
      * 性别
@@ -38,7 +33,38 @@ public class UserVO implements Serializable {
     private Integer gender;
 
     /**
-     * 用户角色: user, admin
+     * 年级
+     */
+    private String userGrade;
+
+    /**
+     * 院系
+
+     */
+    private String deptId;
+
+    /**
+     * 用户头像
+     */
+    private String userAvatar;
+
+    /**
+     * 账号
+     */
+    private String userAccount;
+
+    /**
+     * 电话
+     */
+    private String phone;
+
+    /**
+     * 邮箱
+     */
+    private String email;
+
+    /**
+     * 用户角色：student / teacher / admin
      */
     private String userRole;
 
@@ -47,10 +73,6 @@ public class UserVO implements Serializable {
      */
     private Date createTime;
 
-    /**
-     * 更新时间
-     */
-    private Date updateTime;
 
     private static final long serialVersionUID = 1L;
 }
