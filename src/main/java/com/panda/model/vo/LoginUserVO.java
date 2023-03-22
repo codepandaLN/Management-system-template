@@ -1,18 +1,23 @@
-package com.panda.model.dto.user;
+package com.panda.model.vo;
 
-import com.baomidou.mybatisplus.annotation.TableLogic;
 import lombok.Data;
 
 import java.io.Serializable;
 import java.util.Date;
 
 /**
- * 用户创建请求
+ * 已登录用户视图（脱敏）
  *
- * @author panda
- */
+ * @author <a href="https://github.com/liyupi">程序员鱼皮</a>
+ * @from <a href="https://yupi.icu">编程导航知识星球</a>
+ **/
 @Data
-public class StudentAddRequest implements Serializable {
+public class LoginUserVO implements Serializable {
+
+    /**
+     * 用户 id
+     */
+    private Long id;
 
     /**
      * 学号
@@ -22,7 +27,7 @@ public class StudentAddRequest implements Serializable {
     /**
      * 姓名
      */
-    private String name;
+    private String userName;
 
     /**
      * 性别
@@ -46,15 +51,14 @@ public class StudentAddRequest implements Serializable {
     private String userAvatar;
 
     /**
-     * 账号
+     * 用户简介
      */
-    private String userAccount;
+    private String userProfile;
 
     /**
-     * 密码
+     * 用户角色：user/admin/ban
      */
-    private String userPassword;
-
+    private String userRole;
     /**
      * 电话
      */
@@ -65,11 +69,15 @@ public class StudentAddRequest implements Serializable {
      */
     private String email;
 
+    /**
+     * 创建时间
+     */
+    private Date createTime;
 
     /**
-     * 用户角色：student / teacher / admin
+     * 更新时间
      */
-    private String userRole;
+    private Date updateTime;
 
     private static final long serialVersionUID = 1L;
 }
