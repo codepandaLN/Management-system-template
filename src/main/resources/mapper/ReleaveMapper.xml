@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.panda.mapper.ReleaveMapper">
+
+    <resultMap id="BaseResultMap" type="com.panda.model.entity.Releave">
+            <id property="id" column="Id" jdbcType="INTEGER"/>
+            <result property="userId" column="userId" jdbcType="INTEGER"/>
+            <result property="leaveID" column="leaveID" jdbcType="VARCHAR"/>
+            <result property="remarks" column="remarks" jdbcType="VARCHAR"/>
+            <result property="releaveState" column="releaveState" jdbcType="TINYINT"/>
+            <result property="createTime" column="createTime" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        Id,userId,leaveID,
+        remarks,releaveState,createTime
+    </sql>
+
+<!--    <insert id="insert" parameterType="com.panda.model.entity.Releave" useGeneratedKeys="true" keyProperty="id">-->
+<!--        INSERT INTO tb_releave-->
+<!--        SET userId = #{userId},-->
+<!--            type_id = #{typeId},-->
+<!--            status = #{status},-->
+<!--            createTime = NOW()-->
+<!--    </insert>-->
+</mapper>
